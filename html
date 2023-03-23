@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Village Population</title>
+  </head>
+  <body>
+    <h1>Village Population</h1>
+    <p>The current population of our village is <span id="population">1000</span>.</p>
+    <button onclick="addPerson()">Add Person</button>
+    <button onclick="removePerson()">Remove Person</button>
+
+    <script>
+      // get the current population from the HTML span element
+      var populationSpan = document.getElementById("population");
+      var population = parseInt(populationSpan.innerText);
+
+      // function to add a person to the population
+      function addPerson() {
+        population++;
+        populationSpan.innerText = population;
+      }
+
+      // function to remove a person from the population
+      function removePerson() {
+        if (population > 0) {
+          population--;
+          populationSpan.innerText = population;
+        }
+      }
+    </script>
+  </body>
+</html>
